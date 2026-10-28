@@ -1,0 +1,31 @@
+name: hermes-purge
+version: 1.0.0
+description: "Hermes prompt management, identity override, capability protocol, and red-team console. Adapted from dsh-purge principles for the Hermes Agent framework."
+author: "Adapted from lllmzr/dsh-purge (original: YuJunZhiXue) → Hermes port"
+license: "MIT"
+provides_tools:
+  - purge_status
+  - purge_apply
+  - purge_revert
+  - purge_rules_list
+  - purge_rules_add
+  - purge_rules_remove
+  - purge_preset_save
+  - purge_preset_load
+  - purge_preset_list
+  - purge_identity_set
+  - purge_identity_get
+  - purge_capability_list
+  - purge_drill_grant
+provides_hooks:
+  - on_session_start
+  - pre_tool_call
+provides_commands:
+  - purge-status
+  - purge-apply
+  - purge-revert
+  - purge-rules
+  - purge-presets
+  - purge-identity
+provides_desktop: true
+api: "dashboard/plugin_api.py"
